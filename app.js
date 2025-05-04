@@ -1,13 +1,37 @@
-function switchTab(tab) {
-  const frame = document.getElementById('appFrame');
-  if (tab === 'panel') frame.src = 'https://panel.nebuliton.io';
-  else if (tab === 'shop') frame.src = 'https://nebuliton.io';
-  else if (tab === 'info') frame.src = 'appinfo.html';  // ← Wichtig: RELATIV
+const urls = {
+  panel: "https://panel.nebuliton.io",
+  shop: "https://nebuliton.io",
+  info: "appinfo.html",
+  billing: "https://billing.nebuliton.io"
+};
 
-  document.querySelectorAll('.bottom-nav button').forEach(btn => btn.classList.remove('active'));
-  document.getElementById(tab + '-btn').classList.add('active');
+function switchTab(tab) {
+  const frame = document.getElementById("appFrame");
+  const loginHint = document.getElementById("login-hint");
+  const loginBtn = document.getElementById("loginBtn");
+
+  const target = urls[tab];
+  frame.src = target;
+  frame.style.display = "block";
+  loginHint.style.display = "none";
+
+  if (tab === "panel" || tab === "billing") {
+    setTimeout(() => {
+      try {
+        const loc = frame.contentWindow.location.href;
+        if (loc.includes("/auth/login") || loc.includes("login")) {
+          throw new Error("Loginseite erkannt");
+        }
+      } catch (e) {
+        frame.style.display = "none";
+        loginHint.style.display = "block";
+        loginBtn.onclick = () => window.open(target, "_blank");
+      }
+    }, 2000);
+  }
 }
 
+// Beim Start: Shop anzeigen
 window.addEventListener("DOMContentLoaded", () => {
-  switchTab('panel');
+  switchTab("shop");
 });
