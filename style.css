@@ -6,31 +6,29 @@ body {
 }
 
 .app-container {
+  padding: 20px;
+}
+
+.link-buttons {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  gap: 12px;
+  max-width: 300px;
+  margin: 30px auto;
 }
 
-.bottom-nav {
-  display: flex;
-  justify-content: space-around;
-  background-color: #1e1e2f;
-  padding: 12px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-.bottom-nav button {
-  background: none;
+.link-buttons button {
+  background-color: #ffa500;
+  color: #1d1122;
   border: none;
-  color: #fff1cc;
+  padding: 14px 20px;
   font-size: 16px;
   font-weight: bold;
-  padding: 8px 16px;
+  border-radius: 10px;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-.bottom-nav button.active {
-  border-bottom: 2px solid #ffa500;
+.link-buttons button:hover {
+  background-color: #ffb733;
 }
