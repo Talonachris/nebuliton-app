@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nebuliton App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#1d1122">
+</head>
+<body>
+  <div class="app-container">
+    <iframe id="appFrame" src="" frameborder="0"></iframe>
+    
+    <div class="bottom-nav">
+      <button id="panel-btn" onclick="switchTab('panel')">Panel</button>
+      <button id="shop-btn" onclick="switchTab('shop')">Shop</button>
+      <button id="info-btn" onclick="switchTab('info')">Info</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+</body>
+</html>
