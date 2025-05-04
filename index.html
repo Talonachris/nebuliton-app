@@ -9,16 +9,18 @@
   <meta name="theme-color" content="#1d1122">
 </head>
 <body>
-  <div class="app-container" style="padding: 40px; text-align:center;">
-    <h1>Nebuliton Web App</h1>
-    <p style="color:#fff1cc;">Wähle einen Bereich aus:</p>
+  <div class="app-container">
+    <h1>Nebuliton App</h1>
+    <p class="sub">Wähle einen Bereich aus:</p>
 
     <div class="link-buttons">
-      <button onclick="openTab('panel')">🌐 Panel öffnen</button>
-      <button onclick="openTab('shop')">🛒 Shop öffnen</button>
+      <button onclick="openTab('panel')">🌐 Panel</button>
+      <button onclick="openTab('shop')">🛒 Shop</button>
       <button onclick="openTab('billing')">💳 Kundenbereich</button>
-      <button onclick="openTab('info')">ℹ️ App Info</button>
+      <button onclick="openTab('info')">ℹ️ Info</button>
     </div>
+
+    <p id="returnHint" class="hint">Wenn du fertig bist, schließe den Tab oder tippe auf „Fertig“, um zur App zurückzukehren.</p>
   </div>
 
   <script src="app.js"></script>
