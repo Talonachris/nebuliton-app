@@ -9,35 +9,17 @@
   <meta name="theme-color" content="#1d1122">
 </head>
 <body>
-  <div class="app-container">
+  <div class="app-container" style="padding: 40px; text-align:center;">
+    <h1>Nebuliton Web App</h1>
+    <p style="color:#fff1cc;">Wähle einen Bereich aus:</p>
 
-    <!-- Login-Hinweis -->
-    <div id="login-hint" style="display:none; text-align:center; padding:20px; background:#2a173a;">
-      <p style="color:#fff1cc;">Du bist nicht eingeloggt. Bitte öffne das Panel in einem neuen Tab und melde dich an.</p>
-      <button id="loginBtn" style="background:#ffa500; color:#1d1122; padding:10px 20px; border:none; border-radius:6px; font-weight:bold;">
-        Jetzt einloggen
-      </button>
-    </div>
-
-    <!-- Hauptinhalt -->
-    <iframe id="appFrame" src="" frameborder="0" style="width:100%; height:100vh; display:none;"></iframe>
-
-    <!-- Navigation -->
-    <div class="bottom-nav">
-      <button id="panel-btn" onclick="switchTab('panel')">Panel</button>
-      <button id="shop-btn" onclick="switchTab('shop')">Shop</button>
-      <button id="info-btn" onclick="switchTab('info')">Info</button>
+    <div class="link-buttons">
+      <button onclick="openTab('panel')">🌐 Panel öffnen</button>
+      <button onclick="openTab('shop')">🛒 Shop öffnen</button>
+      <button onclick="openTab('billing')">💳 Kundenbereich</button>
+      <button onclick="openTab('info')">ℹ️ App Info</button>
     </div>
   </div>
-  <div id="login-hint" style="display:none; text-align:center; padding:20px; background:#2a173a;">
-  <p style="color:#fff1cc;">Du bist nicht eingeloggt. Bitte öffne das Panel in einem neuen Tab und melde dich an.</p>
-  <button id="loginBtn" style="background:#ffa500; color:#1d1122; padding:10px 20px; margin:10px; border:none; border-radius:6px; font-weight:bold;">
-    Jetzt einloggen
-  </button><br>
-  <button id="confirmLoginBtn" style="background:#ffffff22; color:#fff1cc; padding:8px 16px; margin-top:10px; border:none; border-radius:6px; display:none;">
-    Ich bin eingeloggt – Seite neu laden
-  </button>
-</div>
 
   <script src="app.js"></script>
 </body>
