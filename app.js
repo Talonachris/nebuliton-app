@@ -9,6 +9,11 @@ function openTab(target) {
   const url = urls[target];
   if (url) {
     window.open(url, "_blank");
+
+    const hint = document.getElementById("returnHint");
+    if (hint) {
+      hint.style.display = "block";
+    }
   } else {
     alert("Link nicht gefunden.");
   }
