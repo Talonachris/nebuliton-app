@@ -27,13 +27,14 @@ Die Nebuliton App ist deine zentrale Lösung, um Minecraft- und andere Gameserve
 2. Teilen-Symbol antippen
 3. „Zum Home-Bildschirm hinzufügen“ auswählen
 
-### 🤖 Android (APK)
+### 🤖 Android (Chrome)
 
-> 👉 [Hier APK herunterladen](https://deine-seite.de/download/nebuliton.apk) *(Download-Link anpassen)*
+1. [WebApp öffnen](https://talonachris.github.io/nebuliton-app/) im **Chrome-Browser**
+2. Oben rechts auf das Drei-Punkte-Menü tippen
+3. „Zum Startbildschirm hinzufügen“ auswählen
+4. App-Name bestätigen → Fertig!
 
-1. APK auf das Gerät laden
-2. Installieren & „unbekannte Quellen“ erlauben
-3. Fertig!
+> Die App wird wie eine normale Anwendung auf deinem Android-Gerät installiert – ganz ohne APK.
 
 ---
 
