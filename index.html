@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nebuliton App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <meta name="theme-color" content="#111827" />
+</head>
+<body>
+  <header>
+    <h1>Nebuliton</h1>
+    <nav>
+      <a href="https://status.nebuliton.net" target="_blank">Status</a>
+      <a href="https://panel.nebuliton.net" target="_blank">Pterodactyl</a>
+      <a href="https://billing.nebuliton.net" target="_blank">Clientexec</a>
+    </nav>
+  </header>
+  <main>
+    <p>Welcome to the Nebuliton App. Select a section above to continue.</p>
+  </main>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+</body>
+</html>
